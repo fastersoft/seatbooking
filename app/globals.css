@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#diagramarea{
+   width:100%;
+   height:100%;
+}
+
+.holder{
+   width:100%;
+   height:100%;
+   overflow:hidden !important;
+}
+
+.line{
+   cursor:default;
+   pointer-events: stroke;
+   stroke-width:1px;
+}
+
+.line:hover{
+   cursor:pointer;
+   stroke-width:3px;
+}
+
+.drag-handle{
+   cursor:move;
+}
+
+#sidebar{
+   display:flex;
+   width:250px;
+   height:100%;
+}
+
+#wrapper{
+   height:100vh;
+   width:100vw;
+   display:flex;
+}
+
+#drawarea{
+   display:flex;
+   width:calc( 100% - 250px);
+}
+
+.zoom{   
+   outline: none; 
+   z-index: 10000000; 
+   width: 30px; 
+   display: inline-block; 
+   position: absolute; 
+   float: right; 
+   right: 10px; 
+   font-family: "Arial Unicode MS", "Lucida Grande";
+   font-size: 25px; 
+   font-weight: bolder; 
+   color: rgb(0, 0, 0); 
+   margin-right: 10px;
+}
+
+.zoom_in{
+    outline: none; 
+    color: white; 
+    background: red;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 25px 25px 0 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    width: 30px;
+}
+
+.home{
+    outline: none; 
+    color: white; 
+    background: red;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom:5px;
+    width: 30px;
+    height: 43px;
+}
+
+
+.zoom_out{
+    outline: none; 
+    color: white; 
+    background: red;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 0px 0px 25px 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    width: 30px;
+}
+
+svg{
+   overflow:hidden !important;
+}
+
+.grid.x-grid{
+   stroke:rgba(245,245,245,.5)
+}
+
+.grid.y-grid{
+   stroke:rgba(245,245,245,.5)
+}
